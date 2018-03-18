@@ -18,7 +18,7 @@
 
 <body ng-app="categoryComponentApp" ng-controller="AppCtrl">
 	<!--[if lte IE 8]>
-	  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 	<!-- Add your site or application content here -->
 	<div ui-view=""></div>
@@ -34,11 +34,15 @@
 	<script src="scripts/app.controller.js"></script>
 	<script src="scripts/router.js"></script>
 
-	<script src="scripts/services/interceptor.js"></script>
+	<script src="scripts/services/constants.js"></script>
 	<script src="scripts/services/httpRequests.js"></script>
+	<script src="scripts/services/interceptor.js"></script>
+	<script src="scripts/services/login.js"></script>
 	
-	<script src="sections/search-git/searchGit.controller.js"></script>
-	<script src="sections/search-git/searchGit.service.js"></script>
+	<script src="sections/category/category.controller.js"></script>
+	<script src="sections/category/category.service.js"></script>
+	<script src="sections/markets/markets.controller.js"></script>
+	<script src="sections/markets/markets.service.js"></script>
 	<!-- endbuild -->
 </body>
 

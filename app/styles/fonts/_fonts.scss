@@ -1,0 +1,28 @@
+@font-face {
+	font-family: 'SFUIDisplay-Medium';
+	src: url('#{$font-path}/SFUIDisplay-Medium.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SFUIDisplay-Semibold';
+	src: url('#{$font-path}/SFUIDisplay-Semibold.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SFUIDisplay-Regular';
+	src: url('#{$font-path}/SFUIDisplay-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url('#{$font-path}/HelveticaNeueCyr-RomanF.otf');
+	src: url('#{$font-path}/HelveticaNeueCyr-Roman.otf') format('otf');
+	font-weight: normal;
+	font-style: normal;
+}

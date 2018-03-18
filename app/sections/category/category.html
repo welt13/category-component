@@ -1,0 +1,51 @@
+<div class="categories">
+     <div class="category" ng-click="selectCategory()">
+        <div class="category__icon">
+            <img src="static/images/ic_star.svg" class="category__icon-star">
+        </div>
+        <div class="category__name"> Populares </div>
+        <div
+            ng-class="{'category__check': categoryChecked, 'category__uncheck': !categoryChecked}">
+                <img src="static/images/ic_checked.svg" alt="">
+        </div>
+    </div>
+    <div class="category__container" ng-repeat="category in categories">
+        <div class="category" id="{{category.name}}" ng-click="selectCategory(category)">
+            <div class="category__icon">
+                <img src="{{category.icon}}">
+            </div>
+            <div class="category__name"> {{category.name}} </div>
+            <div class="category__button">
+                <div ng-if="!category.selected">
+                    <img src="static/images/ic_hide.svg" alt="" class="category__icon-hide">
+                </div>
+                <div ng-if="category.selected">
+                    <img src="static/images/ic_show.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="subcategories__container" ng-class="{'subcategories--show': category.selected}">
+            <div class="subcategory" ng-click="getProductsCategory(category);">
+                <div class="subcategory__icon"></div>
+                <div class="subcategory__name">
+                    Ver toda la sección
+                </div>
+                <div ng-class="{'subcategory__check': subcategoryChecked, 'subcategory__uncheck': !subcategoryChecked}">
+                    <img src="static/images/ic_checked.svg" alt="">
+                </div>
+            </div>
+            <div class="subcategory" ng-repeat="subcategory in category.categories"  ng-click="getProductsCategory(category,subcategory)">
+                <div class="subcategory__icon">
+                    <!--<img src="{{subcategory.icon}}">-->
+                </div>
+                <div class="subcategory__name">
+                    {{subcategory.name}}
+                </div>
+                <div
+                    ng-class="{'subcategory__check': subcategory.selected, 'subcategory__uncheck': !subcategory.selected}">
+                    <img src="static/images/ic_checked.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,9 @@
 
             return {
                 request: function(request) {
+                    if ( request.params === null ) {
+                        delete request.params;
+                    }
                     return request;
                 },
                 requestError: function(rejection) {

@@ -5,20 +5,24 @@
 (function (angular, app) {
 
 
-    app.factory('httpRequestsSrv', ['$http', function ($http) {
+    app.factory('httpRequestsSrv', ['$http', 'servicesBaseURL', function ($http, servicesBaseURL) {
 
-            var get = function (configuration) {
+            var get = function (configuracion) {
 
-                var requestConfig = {
-                    url: null
+                var peticionConfig = {
+                    url: null,
+                    params: null
                 };
 
-                angular.extend(requestConfig, configuration);
+                var auxBaseURL = servicesBaseURL;
+
+                angular.extend(peticionConfig, configuracion);
 
                 return $http({
-                    method: 'GET',
-                    url: requestConfig.url
-                });
+                     method: 'GET',
+                     url: auxBaseURL + peticionConfig.url,
+                     params: peticionConfig.params
+                 });
             };
 
             return {

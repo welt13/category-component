@@ -1,0 +1,29 @@
+// Colors
+$color-black: #000000;
+$color-gray-light: #f5f5f5;
+$color-gray: #d5d5d5;
+$color-gray-dark: #666666;
+$color-green: #4fd053;
+$color-white: #ffffff;
+
+// Font sizes
+$small-size: 12px;
+$medium-size: 14px;
+$big-size: 18px;
+
+// Line height
+$small-height: 14px;
+$medium-height: 16px;
+$big-height: 21px;
+$big-height-xs: 18px;
+
+// Margin-Padding
+$size-margin-padding: 6px;                               		// 6px
+$size-margin-padding-short: $size-margin-padding / 2;     		// 3px
+$size-margin-padding-medium: $size-margin-padding * 2;    		// 12px
+$size-margin-padding-xmedium: $size-margin-padding-medium + 2;  // 14px
+$size-margin-padding-large: $size-margin-padding-medium + 4;    // 16px
+$size-margin-padding-xlarge: $size-margin-padding * 3;    		// 18px
+
+// Size Base
+$base: 8px;

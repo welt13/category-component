@@ -1,0 +1,30 @@
+<div class="markets" ng-class="{'markets--fixed-position': marketSelected}">
+    <div ng-if="marketSelected">
+        <div class="market" style="background-color: rgb({{market.color}}); opacity: 1;">
+            <div class="market__icon">
+                <img src="{{market.icon}}">
+            </div>
+            <div class="market__details">
+                <div class="market__name"> {{market.name}} </div>
+                <div class="market__subtitle"> Comprando en 28010 </div>
+            </div>
+            <div class="market__button" ng-click="changeMarket()"> CAMBIAR </div>
+        </div>
+        <div ng-include="'sections/category/category.html'" ng-controller="CategoryCtrl"></div>
+    </div>
+    <div ng-if="!marketSelected">
+        <div ng-repeat="market in markets">
+            <div class="market" style="background-color: rgb({{market.color}}); opacity: 1;">
+                <div class="market__icon">
+                    <img src="{{market.icon}}">
+                </div>
+                <div class="market__details">
+                    <div class="market__name" ng-click="selectMarket(market)"> {{market.name}} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+	<img src="{{market.companies[0].picture}}" alt="" class="market__image">
+</div>

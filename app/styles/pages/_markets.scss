@@ -1,0 +1,67 @@
+body{
+	color: $color-gray-dark;
+	background-color: rgba($color-black,0.75);
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	.market__image {
+		padding-left: 324px;
+	}
+}
+
+.market {
+	background-color: rgba($color-black,0.1);
+	color: $color-white;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: $base * 8;
+	line-height: $base * 8;
+	vertical-align: middle;
+	cursor: pointer;
+	.market__button {
+		font-family: $font-medium;
+		font-size: $small-size;
+		line-height: $small-height;
+		vertical-align: middle;
+		margin-right: ($base * 3)/2;
+	}
+	.market__icon img {
+		width: $base * 3;
+		height: $base * 3;
+		margin: 0 ($base * 3)/2;
+		vertical-align: middle;
+	}
+	.market__details {
+		flex-grow: 2;
+	}
+	.market__name {
+		font-family: $font-semibold;
+		font-size: $big-size;
+		line-height: $big-height-xs;
+	}
+	.market__subtitle {
+		font-family: $font-helvetica;
+		font-size: $medium-size;
+		line-height: $medium-height;
+
+	}
+}
+
+.markets {
+	width: 324px;
+	float: left;
+	z-index: 1;
+	background-color: $color-white;
+}
+
+.markets--fixed-position {
+	position: fixed;
+	overflow: scroll;
+}

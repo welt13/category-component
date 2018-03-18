@@ -7,10 +7,10 @@
             $urlRouterProvider.otherwise('/');
 
             $stateProvider
-                .state('/', {
-                    url: '/',
-                    templateUrl: '',
-                    controller:''
+                .state('markets', {
+                    url: '/markets',
+                    templateUrl: 'sections/markets/markets.html',
+                    controller:'MarketsCtrl'
                 });
         }
     ]);
