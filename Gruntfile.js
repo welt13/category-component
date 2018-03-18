@@ -1,6 +1,3 @@
-/*jshint quotmark:false */
-/* jshint -W003 */
-
 'use strict';
 
 
@@ -143,20 +140,6 @@ module.exports = function(grunt) {
                     '<%= yeoman.app %>/**/*.html',
                     '.tmp/styles/{,*/}*.css',
                     '<%= yeoman.app %>/static/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}']
-            }
-        },
-
-        // Make sure there are no obvious mistakes
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc',
-                reporter: require('jshint-stylish')
-            },
-            all: {
-                src: [
-                    'Gruntfile.js',
-                    '<%= yeoman.app %>/task-hl/{scripts,sections,modals}/{,*/}*.js'
-                ]
             }
         },
 
@@ -344,7 +327,6 @@ module.exports = function(grunt) {
             'clean:server',
             'concurrent:server',
             'connect:livereload',
-            'jshint',
             'watch'
         ]);
     });
@@ -366,7 +348,6 @@ module.exports = function(grunt) {
         'htmlmin'
     ]);
     grunt.registerTask('default', [
-        'newer:jshint',
         'build'
     ]);
     grunt.registerTask('dist', [
@@ -374,5 +355,3 @@ module.exports = function(grunt) {
         'watch'
     ]);
 };
-
-/* jshint +W003 */
